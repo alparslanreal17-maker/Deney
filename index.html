@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Deney #1 · 48 Saat</title>
+<meta name="description" content="Bu QR'ı okuttun. Artık deneyin bir parçasısın.">
+<meta name="theme-color" content="#0B1F4D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* ====== AYARLAR: yayına almadan önce burayı düzenle (aşağıdaki AYAR objesi) ====== */
+  :root{
+    --laci:#0B1F4D; --laci2:#122a63; --kirmizi:#E8202A; --mavi:#2FA8FF; --beyaz:#ffffff; --soluk:#b9c6e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--laci);color:var(--beyaz)}
+  body{font-family:Inter,system-ui,-apple-system,sans-serif;min-height:100svh;display:flex;justify-content:center;
+    background:radial-gradient(120% 70% at 50% 0%, #1c3a85 0%, var(--laci) 60%);}
+  main{width:100%;max-width:440px;padding:22px 18px 36px;display:flex;flex-direction:column;gap:18px}
+  .kayit{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;letter-spacing:.12em;
+    color:var(--kirmizi);background:rgba(232,32,42,.12);border:1px solid rgba(232,32,42,.45);padding:6px 12px;border-radius:999px;align-self:flex-start}
+  .nokta{width:9px;height:9px;border-radius:50%;background:var(--kirmizi);animation:yan 1.1s infinite}
+  @keyframes yan{50%{opacity:.15}}
+  .ust{font-family:Anton,Impact,sans-serif;font-size:15px;letter-spacing:.2em;color:var(--mavi);margin-bottom:8px}
+  h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(44px,13vw,60px);line-height:.95;text-transform:uppercase}
+  h1 em{font-style:normal;color:var(--kirmizi)}
+  .sayac{font-family:Anton,Impact,sans-serif;font-size:clamp(46px,15vw,66px);letter-spacing:.04em;text-align:center;
+    background:#000;border:2px solid var(--kirmizi);border-radius:14px;padding:8px 0 4px;color:var(--kirmizi);
+    text-shadow:0 0 18px rgba(232,32,42,.6);font-variant-numeric:tabular-nums}
+  .sayac-alt{text-align:center;font-size:12px;color:var(--soluk);margin-top:-10px;letter-spacing:.08em;text-transform:uppercase}
+  .kart{background:var(--laci2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+  .kart p{font-size:17px;line-height:1.45;color:#e6ecfb}
+  .kart strong{color:#fff}
+  .parca{font-size:21px!important;font-weight:800;color:#fff!important}
+  .yer{font-size:13px!important;color:var(--mavi)!important;font-weight:600}
+  .abone{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--kirmizi);color:#fff;text-decoration:none;
+    font-weight:800;font-size:22px;letter-spacing:.04em;padding:20px;border-radius:16px;box-shadow:0 10px 30px rgba(232,32,42,.45);
+    animation:nabiz 1.8s ease-in-out infinite}
+  .abone svg{width:30px;height:30px;flex:none}
+  @keyframes nabiz{50%{transform:scale(1.03)}}
+  .abone:active{transform:scale(.97)}
+  .not{text-align:center;font-size:13px;color:var(--soluk);margin-top:-8px}
+  .diger{display:flex;gap:10px}
+  .diger a{flex:1;text-align:center;text-decoration:none;color:#fff;font-weight:600;font-size:15px;padding:14px 8px;border-radius:12px;
+    border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04)}
+  .final{text-align:center;font-weight:800;font-size:17px;line-height:1.4}
+  .final span{color:var(--mavi)}
+  footer{text-align:center;font-size:12px;color:var(--soluk);letter-spacing:.14em;margin-top:6px}
+  @media (prefers-reduced-motion:reduce){.nokta,.abone{animation:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="kayit"><span class="nokta"></span>DENEY KAYITTA</div>
+
+  <div>
+    <div class="ust">DENEY #1</div>
+    <h1>Ünlü olmak için <em>48 saatim</em> var</h1>
+  </div>
+
+  <div class="sayac" id="sayac">48:00:00</div>
+  <div class="sayac-alt" id="sayacAlt">kalan süre</div>
+
+  <section class="kart">
+    <p class="parca">Bu QR'ı okuttun. Artık sen de bu deneyin bir parçasısın.</p>
+    <p class="yer" id="yer" hidden></p>
+    <p>YouTube'da yeni içerik üretmeye başladım. Kamera karşısında hâlâ utanıyorum ama <strong>bu benim son şansım.</strong></p>
+    <p>48 saat boyunca ünlü olmaya çalışıyorum. Senin tek bir dokunuşun bu deneyin sonucunu değiştirebilir.</p>
+  </section>
+
+  <a class="abone" id="abone" href="https://www.youtube.com/@alparslanmedya?sub_confirmation=1" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8z"/><path fill="#E8202A" d="M9.75 15.5V8.5L15.8 12z"/></svg>
+    ABONE OL
+  </a>
+  <p class="not">Dokununca YouTube açılır, tek tıkla abone olursun.</p>
+
+  <div class="diger" id="diger"></div>
+
+  <p class="final">Deneyin sonucunu <span>bir sonraki videoda</span> göreceksin. Sen de oradaydın. 👀</p>
+
+  <footer>ALPARSLAN MEDYA</footer>
+</main>
+
+<script>
+  // ====== AYARLAR ======
+  const AYAR = {
+    // Deneyin başladığı an (Türkiye saati). Boş bırakılırsa sayaç 48:00:00'da bekler.
+    // Örnek: "2026-11-21T10:00:00+03:00"
+    baslangic: "",
+    sureSaat: 48,
+    instagram: "", // örn. "https://instagram.com/kullaniciadi"
+    tiktok: "",    // örn. "https://www.tiktok.com/@kullaniciadi"
+    // QR'daki ?yer=kafe gibi etiketlerin ekranda görünen adı
+    yerler: { kafe: "kafede", durak: "durakta", okul: "okulda", esnaf: "bir esnafın tezgâhında", sokak: "sokakta", canli: "canlı yayında" }
+  };
+
+  // Hangi QR'dan geldi? (?yer=kafe)
+  const yer = new URLSearchParams(location.search).get("yer");
+  if (yer) {
+    const el = document.getElementById("yer");
+    el.textContent = "📍 Bu QR'ı " + (AYAR.yerler[yer] || yer) + " buldun.";
+    el.hidden = false;
+  }
+
+  // Diğer hesaplar
+  const diger = document.getElementById("diger");
+  [["Instagram", AYAR.instagram], ["TikTok", AYAR.tiktok]].forEach(([ad, url]) => {
+    if (!url) return;
+    const a = document.createElement("a");
+    a.href = url; a.rel = "noopener"; a.textContent = ad;
+    diger.appendChild(a);
+  });
+  if (!diger.children.length) diger.remove();
+
+  // Geri sayım
+  const sayac = document.getElementById("sayac"), alt = document.getElementById("sayacAlt");
+  const iki = n => String(n).padStart(2, "0");
+  function guncelle() {
+    if (!AYAR.baslangic) { alt.textContent = "deney çok yakında başlıyor"; return; }
+    const bitis = new Date(AYAR.baslangic).getTime() + AYAR.sureSaat * 3600e3;
+    const kalan = Math.max(0, bitis - Date.now());
+    const s = Math.floor(kalan / 1000);
+    sayac.textContent = iki(Math.floor(s / 3600)) + ":" + iki(Math.floor(s % 3600 / 60)) + ":" + iki(s % 60);
+    if (Date.now() < new Date(AYAR.baslangic).getTime()) alt.textContent = "deney çok yakında başlıyor";
+    else alt.textContent = kalan ? "kalan süre" : "süre doldu: sonuç bir sonraki videoda";
+  }
+  guncelle(); setInterval(guncelle, 1000);
+</script>
+<!-- SAYAÇ (GoatCounter): hesap açılınca aşağıdaki satırın başındaki/sonundaki yorum işaretlerini kaldır ve KOD'u kendi kodunla değiştir.
+<script data-goatcounter="https://KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+-->
+</body>
+</html>
